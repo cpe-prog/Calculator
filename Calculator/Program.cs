@@ -3,6 +3,7 @@ namespace Calculator;
 
 public static class Program
 {
+
     private static readonly Dictionary<string, IOperator> Operators = new()
     {
         { "add", new AddOperator() },
@@ -16,14 +17,18 @@ public static class Program
 
         const string historyFilePath = @"C:\Users\GRIAN\Desktop\History.txt";
         var history = new List<string>();
+        if (File.Exists(historyFilePath))
+        {
+            history.AddRange(File.ReadAllLines(historyFilePath));
+        }
         
         if (args.Length < 2)
         {
+            ShowHistory(history);
             return;
         }
 
         // var exist = File.Exists(historyFilePath);
-        
         var opString = args[0];
         
         
@@ -44,33 +49,47 @@ public static class Program
                 Console.WriteLine($"Invalid type of input: {args[i]}");
             }
         }
+        
         var result = op.Calculate(numbers);
+        var operation = string.Join(' ', args.ToArray());
         Console.WriteLine($"Here is the result: {result}");
         
         
-        
-        var operation = string.Join(' ', args.ToArray());
         history.Add(operation);
-        File.AppendAllLines(historyFilePath, history);
+        File.WriteAllLines(historyFilePath, history);
         
-        if (args.Contains("ShowHistory"))
-        {
-            Console.WriteLine("History:");
-            foreach (var line in File.ReadAllLines(historyFilePath))
-            {
-                Console.WriteLine(line);
-            }
-        }
-        else if (args.Contains("RemoveHistory"))
-        {
-            File.WriteAllText(historyFilePath, string.Empty);
-            Console.WriteLine("History Cleared!");
-        }
-      
 
-
+        switch (args.Length)
+        {
+            case 2 when args[1] == "show":
+                ShowHistory(history);
+                break;
+            case 1 when args[0] == "remove":
+                RemoveHistory(historyFilePath);
+                break;
+        }
     }
+    
+    
+    //show history
+    static void ShowHistory(List<string> history)
+    {
+        Console.WriteLine("History:");
+        foreach (var operation in history)
+        {
+            Console.WriteLine(operation);
+        }
+    }
+    //remove history
+    static void RemoveHistory(string historyFilePath)
+    {
+        File.Delete(historyFilePath);
+        Console.WriteLine("History Cleared!");
+    }
+    
 }
+
+
 internal interface IOperator
 {
     double Calculate(double[] numbers);
