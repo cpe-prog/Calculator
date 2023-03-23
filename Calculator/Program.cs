@@ -3,7 +3,7 @@ namespace Calculator;
 
 public static class Program
 {
-    static readonly Dictionary<string, IOperator> Operators = new()
+    private static readonly Dictionary<string, IOperator> Operators = new()
     {
         { "add", new AddOperator() },
         { "subtract", new SubtractOperator() },
@@ -11,17 +11,18 @@ public static class Program
         { "divide", new DivideOperator() }
     };
     
-
-    static void Main(string[] args)
+    private static void Main(string[] args)
     {
-        const string historyFilePath = @"C:\Desktop\History.txt";
+
+        const string historyFilePath = @"C:\Users\GRIAN\Desktop\History.txt";
         var history = new List<string>();
         
-
         if (args.Length < 2)
         {
             return;
         }
+
+        // var exist = File.Exists(historyFilePath);
         
         var opString = args[0];
         
@@ -45,15 +46,31 @@ public static class Program
         }
         var result = op.Calculate(numbers);
         Console.WriteLine($"Here is the result: {result}");
-
-        var operation = string.Join(' ', args);
-        history.Add(operation);
         
+        
+        
+        var operation = string.Join(' ', args.ToArray());
+        history.Add(operation);
         File.AppendAllLines(historyFilePath, history);
+        
+        if (args.Contains("ShowHistory"))
+        {
+            Console.WriteLine("History:");
+            foreach (var line in File.ReadAllLines(historyFilePath))
+            {
+                Console.WriteLine(line);
+            }
+        }
+        else if (args.Contains("RemoveHistory"))
+        {
+            File.WriteAllText(historyFilePath, string.Empty);
+            Console.WriteLine("History Cleared!");
+        }
+      
+
+
     }
 }
-
-
 internal interface IOperator
 {
     double Calculate(double[] numbers);
