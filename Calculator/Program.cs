@@ -11,49 +11,19 @@ public static class Program
         { "divide", new DivideOperator() }
     };
     
-    
-    static readonly List<string> History = new();
-    static void ShowHistory()
-    {
-        Console.WriteLine("History:");
-        foreach (var item in History)
-        {
-            Console.WriteLine(item);
-        }
-    }
-    static void RemoveHistory()
-    {
-        History.Clear();
-    }
 
-    
-    
     static void Main(string[] args)
     {
+        const string historyFilePath = @"C:\Desktop\History.txt";
+        var history = new List<string>();
         
-        // var historyItem = @"C:\Desktop\History.txt";
-        
-        
+
         if (args.Length < 2)
         {
             return;
         }
         
         var opString = args[0];
-        
-        // the main function will check the command show and remove history
-        if (args[0] == "show" && args[1] == "history")
-        {
-            ShowHistory();
-            return;
-        }
-        if (args[0] == "remove" && args[1] == "history")
-        {
-            RemoveHistory();
-            Console.WriteLine("History cleared");
-            return;
-        }
-        
         
         
         if (!Operators.TryGetValue(opString, out var op))
@@ -75,20 +45,11 @@ public static class Program
         }
         var result = op.Calculate(numbers);
         Console.WriteLine($"Here is the result: {result}");
-        
-        
-        var historyItem = $"{opString} ";
-        for (var i = 0; i < numbers.Length; i++)
-        {
-            historyItem += $"{numbers[i]} ";
-            if (i < numbers.Length - 1)
-            {
-                historyItem += $"{opString} ";
-            }
-        }
-        History.Add(historyItem.TrimEnd());
 
-
+        var operation = string.Join(' ', args);
+        history.Add(operation);
+        
+        File.AppendAllLines(historyFilePath, history);
     }
 }
 
