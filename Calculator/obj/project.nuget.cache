@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "rm//0xLzwJ6cecxC1VwEjx1NIeY/VzzftHKwVhnUdqAZ0cYuA1VsbnL03G0SBj8k9JRsUN2XcPqaGNch8lYNLg==",
+  "dgSpecHash": "qm/J6147yxJCI63FrvhrwQOtl13bnGO+9rRIPakb7orRPyZ4ZgrGj1D/W9a+STgFgXadlVaTtyepxTdhxwtRQg==",
   "success": true,
   "projectFilePath": "C:\\Users\\GRIAN\\RiderProjects\\Calculator\\Calculator\\Calculator.csproj",
   "expectedPackageFiles": [
@@ -19,11 +19,7 @@
     "C:\\Users\\GRIAN\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\5.0.0\\system.runtime.compilerservices.unsafe.5.0.0.nupkg.sha512",
     "C:\\Users\\GRIAN\\.nuget\\packages\\system.security.accesscontrol\\5.0.0\\system.security.accesscontrol.5.0.0.nupkg.sha512",
     "C:\\Users\\GRIAN\\.nuget\\packages\\system.security.principal.windows\\5.0.0\\system.security.principal.windows.5.0.0.nupkg.sha512",
-    "C:\\Users\\GRIAN\\.nuget\\packages\\zstdsharp.port\\0.6.2\\zstdsharp.port.0.6.2.nupkg.sha512",
-    "C:\\Users\\GRIAN\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.12\\microsoft.netcore.app.ref.6.0.12.nupkg.sha512",
-    "C:\\Users\\GRIAN\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.12\\microsoft.windowsdesktop.app.ref.6.0.12.nupkg.sha512",
-    "C:\\Users\\GRIAN\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.12\\microsoft.aspnetcore.app.ref.6.0.12.nupkg.sha512",
-    "C:\\Users\\GRIAN\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.12\\microsoft.netcore.app.host.win-x64.6.0.12.nupkg.sha512"
+    "C:\\Users\\GRIAN\\.nuget\\packages\\zstdsharp.port\\0.6.2\\zstdsharp.port.0.6.2.nupkg.sha512"
   ],
   "logs": []
 }

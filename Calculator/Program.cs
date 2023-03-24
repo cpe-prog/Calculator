@@ -3,7 +3,6 @@ namespace Calculator;
 
 public static class Program
 {
-
     private static readonly Dictionary<string, IOperator> Operators = new()
     {
         { "add", new AddOperator() },
@@ -11,15 +10,18 @@ public static class Program
         { "multiply", new MultiplyOperator() },
         { "divide", new DivideOperator() }
     };
-    
+
+
     private static void Main(string[] args)
     {
+        // var OperatorSymbol = new List<char>();
+        // var Symbol = OperatorSymbol;
 
         const string historyFilePath = @"C:\Users\GRIAN\Desktop\History.txt";
         var history = new List<string>();
         if (File.Exists(historyFilePath))
         {
-            history.AddRange(File.ReadAllLines(historyFilePath));
+                history.AddRange(File.ReadAllLines(historyFilePath));
         }
         
         if (args.Length < 2)
@@ -27,10 +29,8 @@ public static class Program
             ShowHistory(history);
             return;
         }
-
-        // var exist = File.Exists(historyFilePath);
-        var opString = args[0];
         
+        var opString = args[0];
         
         if (!Operators.TryGetValue(opString, out var op))
         {
@@ -49,22 +49,25 @@ public static class Program
                 Console.WriteLine($"Invalid type of input: {args[i]}");
             }
         }
-        
         var result = op.Calculate(numbers);
-        var operation = string.Join(' ', args.ToArray());
         Console.WriteLine($"Here is the result: {result}");
+       
         
-        
-        history.Add(operation);
-        File.WriteAllLines(historyFilePath, history);
+        var operation1 = $"{numbers[0]} {opString.Length} {numbers[1]} = {result}";
+        using (var writer = File.AppendText(historyFilePath))
+        {
+            writer.WriteLine(operation1);
+        }
+        history.Add(operation1);
+        File.WriteAllLines(historyFilePath , history);
         
 
         switch (args.Length)
         {
-            case 2 when args[1] == "show":
+            case 1 when args[0] == "show":
                 ShowHistory(history);
                 break;
-            case 1 when args[0] == "remove":
+            case 2 when args[1] == "remove":
                 RemoveHistory(historyFilePath);
                 break;
         }
@@ -72,25 +75,25 @@ public static class Program
     
     
     //show history
-    static void ShowHistory(List<string> history)
+    private static void ShowHistory(List<string> history)
     {
         Console.WriteLine("History:");
-        foreach (var operation in history)
+        foreach (var operation1 in history)
         {
-            Console.WriteLine(operation);
+            Console.WriteLine(operation1);
         }
     }
     //remove history
-    static void RemoveHistory(string historyFilePath)
+    private static void RemoveHistory(string historyFilePath)
     {
-        File.Delete(historyFilePath);
-        Console.WriteLine("History Cleared!");
+       File.Delete(historyFilePath);
+       Console.WriteLine("History Cleared.");
     }
     
 }
 
 
-internal interface IOperator
+internal interface IOperator 
 {
     double Calculate(double[] numbers);
 }
