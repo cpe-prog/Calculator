@@ -1,40 +1,42 @@
-﻿using Calculator.Math;
+﻿
+using Calculator.Math;
+
 namespace Calculator;
 
 public static class Program
 {
-    private static readonly Dictionary<string, IOperator> Operators = new()
+    private static readonly Dictionary<string, Operator> Operators = new()
     {
-        { "add", new AddOperator() },
-        { "subtract", new SubtractOperator() },
-        { "multiply", new MultiplyOperator() },
-        { "divide", new DivideOperator() }
+        { "add", new Operator('+', new AddOperation())},
+        { "subtract", new Operator('-', new SubtractOperation())},
+        { "multiply", new Operator('×', new MultiplyOperation())},
+        { "divide", new Operator('÷', new DivideOperation())}
     };
-
-
+    
     private static void Main(string[] args)
     {
-        // var OperatorSymbol = new List<char>();
-        // var Symbol = OperatorSymbol;
+        var cmd = args[0];
+        switch (cmd)
+        {
+            case "show":
+                ShowHistory();
+                return;
+            case "remove":
+                RemoveHistory();
+                return;
+        }
 
-        const string historyFilePath = @"C:\Users\GRIAN\Desktop\History.txt";
+        var db = Environment.ExpandEnvironmentVariables("%USERPROFILE%\\Desktop\\History.txt");
         var history = new List<string>();
-        if (File.Exists(historyFilePath))
+        if (File.Exists(db))
         {
-                history.AddRange(File.ReadAllLines(historyFilePath));
-        }
-        
-        if (args.Length < 2)
-        {
-            ShowHistory(history);
+            history.AddRange(File.ReadAllLines(db));
             return;
-        }
-        
-        var opString = args[0];
-        
-        if (!Operators.TryGetValue(opString, out var op))
+            
+        } 
+        if (!Operators.TryGetValue(cmd, out var op))
         {
-            Console.WriteLine($"Invalid operator: {opString}");
+            Console.WriteLine($"Invalid operator: {cmd}");
             return;
         }
         var numbers = new double[args.Length - 1];
@@ -42,58 +44,77 @@ public static class Program
         {
             if (double.TryParse(args[i], out var number))
             {
-                numbers[i - 1] = number;
+                numbers[i -1] = number;
             }
             else
             {
                 Console.WriteLine($"Invalid type of input: {args[i]}");
             }
         }
-        var result = op.Calculate(numbers);
+        
+        if (numbers.Length < 2)
+        {
+            return;
+        }
+        
+        var result = op.Operation.Calculate(numbers.ToArray());
         Console.WriteLine($"Here is the result: {result}");
-       
-        
-        var operation1 = $"{numbers[0]} {opString.Length} {numbers[1]} = {result}";
-        using (var writer = File.AppendText(historyFilePath))
+        // 1 + 1 = 2
+        var file = "";
+        foreach (var valNumber in numbers)
         {
-            writer.WriteLine(operation1);
+            file += $"{string.Join(" " + op.Symbol + " ", valNumber)}";
         }
-        history.Add(operation1);
-        File.WriteAllLines(historyFilePath , history);
-        
+        file = file.Substring(0, file.Length - 1);
+        file += $" = {result}";
+        SaveHistory(file);
 
-        switch (args.Length)
-        {
-            case 1 when args[0] == "show":
-                ShowHistory(history);
-                break;
-            case 2 when args[1] == "remove":
-                RemoveHistory(historyFilePath);
-                break;
-        }
+
     }
-    
-    
+    //save history
+    private static void SaveHistory(string operation)
+    {
+        var db = Environment.ExpandEnvironmentVariables("%USERPROFILE%\\Desktop\\History.txt");
+        using var filePath = File.AppendText(db);
+        filePath.WriteLine(operation);
+    }
     //show history
-    private static void ShowHistory(List<string> history)
+    private static void ShowHistory()
     {
+        var db = Environment.ExpandEnvironmentVariables("%USERPROFILE%\\Desktop\\History.txt");
+        if (!File.Exists(db)) Console.WriteLine("History not found!");
         Console.WriteLine("History:");
-        foreach (var operation1 in history)
+        var history = File.ReadAllLines(db);
+        foreach (var operation in history)
         {
-            Console.WriteLine(operation1);
+            Console.WriteLine(operation);
         }
     }
-    //remove history
-    private static void RemoveHistory(string historyFilePath)
-    {
-       File.Delete(historyFilePath);
-       Console.WriteLine("History Cleared.");
-    }
     
+    //remove history
+    private static void RemoveHistory()
+    {
+        var db = Environment.ExpandEnvironmentVariables("%USERPROFILE%\\Desktop\\History.txt");
+        //invert if statement
+        if (!File.Exists(db)) Console.WriteLine("History already removed!");
+        File.Delete(db);
+        Console.WriteLine("History Cleared.");
+    }
 }
 
-
-internal interface IOperator 
+internal class Operator
 {
-    double Calculate(double[] numbers);
+    public char Symbol { get;}
+    internal IOperation Operation { get;}
+
+    public Operator(char symbol, IOperation operation)
+    {
+        Symbol = symbol;
+        Operation = operation;
+    }
+}
+
+internal interface IOperation
+{
+    public double Calculate(double[] numbers);
 }
