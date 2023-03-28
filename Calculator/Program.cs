@@ -52,7 +52,6 @@ public static class Program
         File.AppendAllText(db, $"{file}\n");
     }
     
-    
     //show history
     private static void ShowHistory(string filePath)
     {
@@ -64,18 +63,15 @@ public static class Program
     //remove history
     private static void RemoveHistory(string filePath)
     {
-        if (!File.Exists(filePath))
-        {
-            Console.WriteLine("History already removed");
-        }
+        if (!File.Exists(filePath)) return;
         File.Delete(filePath);
         Console.WriteLine("History Cleared");
     }
 }
 internal class Operator
 {
-    public char Symbol { get;}
-    internal IOperation Operation { get;}
+    public char Symbol {get;}
+    internal IOperation Operation {get;}
 
     public Operator(char symbol, IOperation operation)
     {
@@ -83,7 +79,6 @@ internal class Operator
         Operation = operation;
     }
 }
-
 internal interface IOperation
 {
     public double Calculate(double[] numbers);

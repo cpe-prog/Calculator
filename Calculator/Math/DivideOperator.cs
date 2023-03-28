@@ -1,6 +1,6 @@
 ﻿namespace Calculator.Math;
 
-internal class DivideOperator : IOperator
+internal class DivideOperation : IOperation
 {
     public double Calculate(double[] numbers)
     {
