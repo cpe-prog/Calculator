@@ -1,4 +1,8 @@
 ﻿using Calculator.Math;
+using Calculator.SaveMongoDb;
+using Calculator.SaveTextFile;
+using MongoDB.Bson;
+using MongoDB.Driver;
 
 namespace Calculator;
 
@@ -11,18 +15,31 @@ public static class Program
         { "multiply", new Operator('×', new MultiplyOperation())},
         { "divide", new Operator('÷', new DivideOperation())}
     };
-    
     private static void Main(string[] args)
     {
+        const string connectionString = "mongodb://127.0.0.1:27017";
+        const string databaseName = "math_db";
+        const string collectionName = "mathHistory";
+        
         var cmd = args[0];
+        var client = new MongoClient(connectionString);
+        var database = client.GetDatabase(databaseName);
+        var collection = database.GetCollection<BsonDocument>(collectionName);
+        
         var db = Environment.ExpandEnvironmentVariables("%USERPROFILE%\\Desktop\\History.txt");
         switch (cmd)
         {
+            case "showDB":
+                MongoDbHistory.ShowDataBase();
+                return;
+            case "removeDB":
+                MongoDbHistory.RemoveDataBase();
+                return;
             case "show":
-                ShowHistory(db);
+                TextFileHistory.ShowHistory(db);
                 return;
             case "remove":
-                RemoveHistory(db);
+                TextFileHistory.RemoveHistory(db);
                 return;
         }
         
@@ -31,7 +48,7 @@ public static class Program
             Console.WriteLine($"Invalid operator: {cmd}");
             return;
         }
-
+        
         var numbers = new double[args.Length - 1];
         for (var i = 1; i < args.Length; i++)
         {
@@ -47,39 +64,21 @@ public static class Program
         var result = op.Operation.Calculate(numbers.ToArray());
         // 1 + 1 = 2
         var file = $"{string.Join(" "+op.Symbol + " ", numbers)}";
-        file += $" = {result}";
+        var files = $" = {result}";
         Console.WriteLine($"Here is the result: {result}");
-        File.AppendAllText(db, $"{file}\n");
+        File.AppendAllText(db, $"{file}{files}\n");
+        
+        var document = new BsonDocument
+        {
+            {"operation", file},
+            {"result", result}
+        };
+        collection.InsertOne(document);
     }
-    
-    //show history
-    private static void ShowHistory(string filePath)
-    {
-        if (!File.Exists(filePath)) return;
-        Console.WriteLine("History:");
-        var history = File.ReadAllText(filePath);
-        Console.WriteLine(history);
-    }
-    //remove history
-    private static void RemoveHistory(string filePath)
-    {
-        if (!File.Exists(filePath)) return;
-        File.Delete(filePath);
-        Console.WriteLine("History Cleared");
-    }
-}
-internal class Operator
-{
-    public char Symbol {get;}
-    internal IOperation Operation {get;}
 
-    public Operator(char symbol, IOperation operation)
-    {
-        Symbol = symbol;
-        Operation = operation;
-    }
 }
-internal interface IOperation
+
+public interface IOperation
 {
     public double Calculate(double[] numbers);
 }
