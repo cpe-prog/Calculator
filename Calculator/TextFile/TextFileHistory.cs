@@ -1,4 +1,4 @@
-﻿namespace Calculator.SaveTextFile;
+﻿namespace Calculator.TextFile;
 internal abstract class TextFileHistory
 {
     public static void ShowHistory(string filePath)

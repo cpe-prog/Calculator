@@ -1,11 +1,9 @@
 ﻿using Calculator.Math;
-using Calculator.SaveMongoDb;
-using Calculator.SaveTextFile;
-using MongoDB.Bson;
-using MongoDB.Driver;
+using Calculator.MongoDb;
+using Calculator.TextFile;
+using Calculator.TwoChoices;
 
 namespace Calculator;
-
 public static class Program
 {
     private static readonly Dictionary<string, Operator> Operators = new()
@@ -17,29 +15,39 @@ public static class Program
     };
     private static void Main(string[] args)
     {
-        const string connectionString = "mongodb://127.0.0.1:27017";
-        const string databaseName = "math_db";
-        const string collectionName = "mathHistory";
-        
         var cmd = args[0];
-        var client = new MongoClient(connectionString);
-        var database = client.GetDatabase(databaseName);
-        var collection = database.GetCollection<BsonDocument>(collectionName);
-        
         var db = Environment.ExpandEnvironmentVariables("%USERPROFILE%\\Desktop\\History.txt");
         switch (cmd)
         {
-            case "showDB":
+            case "showDB.data":
                 MongoDbHistory.ShowDataBase();
                 return;
-            case "removeDB":
+            case "removeDB.data":
                 MongoDbHistory.RemoveDataBase();
-                return;
-            case "show":
+                return; 
+            case "show.text.file.data":
                 TextFileHistory.ShowHistory(db);
                 return;
-            case "remove":
+            case "remove.text.file.data":
                 TextFileHistory.RemoveHistory(db);
+                return;
+        }
+
+        ITwoChoices twoChoices;
+        Console.WriteLine("Where you like to save?");
+        Console.WriteLine("For Database type: DB");
+        Console.WriteLine("For TextFile type: TF");
+        var choices = Console.ReadLine();
+        switch (choices)
+        {
+            case "DB":
+                twoChoices = new MongoDbDataAccess();
+                break;
+            case "TF":
+                twoChoices = new TextFileDataAccess();
+                break;
+            default:
+                Console.WriteLine("Invalid choices");
                 return;
         }
         
@@ -64,21 +72,15 @@ public static class Program
         var result = op.Operation.Calculate(numbers.ToArray());
         // 1 + 1 = 2
         var file = $"{string.Join(" "+op.Symbol + " ", numbers)}";
-        var files = $" = {result}";
         Console.WriteLine($"Here is the result: {result}");
-        File.AppendAllText(db, $"{file}{files}\n");
-        
-        var document = new BsonDocument
-        {
-            {"operation", file},
-            {"result", result}
-        };
-        collection.InsertOne(document);
+        twoChoices.SaveOperation(file, result);
     }
-
 }
-
 public interface IOperation
+{ 
+    public double Calculate(double[] numbers); 
+}
+public interface ITwoChoices
 {
-    public double Calculate(double[] numbers);
+    public void SaveOperation(string operation, double result);
 }
