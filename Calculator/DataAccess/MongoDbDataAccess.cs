@@ -1,9 +1,9 @@
 ﻿using MongoDB.Bson;
 using MongoDB.Driver;
 
-namespace Calculator.TwoChoices;
+namespace Calculator.DataAccess;
 
-internal class MongoDbDataAccess : ITwoChoices
+internal class MongoDbDataAccess : IDataAccess
 {
     
     private readonly MongoClient _client = new("mongodb://127.0.0.1:27017");
