@@ -1,8 +1,8 @@
 ﻿namespace Calculator.Math;
 
-internal class MultiplyOperation : IOperation
+internal class MultiplyOperation : Operation
 {
-    public double Calculate(double[] numbers)
+    public override double Calculate(double[] numbers)
     {
         var result = numbers[0];
         for (var i = 1; i < numbers.Length; i++)

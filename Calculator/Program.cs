@@ -1,7 +1,7 @@
-﻿using Calculator.Math;
+﻿using Calculator.DataAccessFunctions;
+using Calculator.Math;
 using Calculator.MongoDb;
 using Calculator.TextFile;
-using Calculator.TwoChoices;
 
 namespace Calculator;
 public static class Program
@@ -33,7 +33,7 @@ public static class Program
                 return;
         }
 
-        ITwoChoices twoChoices;
+        DataAccess dataAccess;
         Console.WriteLine("Where you like to save?");
         Console.WriteLine("For Database type: DB");
         Console.WriteLine("For TextFile type: TF");
@@ -41,10 +41,10 @@ public static class Program
         switch (choices)
         {
             case "DB":
-                twoChoices = new MongoDbDataAccess();
+                dataAccess = new MongoDbDataAccess();
                 break;
             case "TF":
-                twoChoices = new TextFileDataAccess();
+                dataAccess = new TextFileDataAccess();
                 break;
             default:
                 Console.WriteLine("Invalid choices");
@@ -73,14 +73,6 @@ public static class Program
         // 1 + 1 = 2
         var file = $"{string.Join(" "+op.Symbol + " ", numbers)}";
         Console.WriteLine($"Here is the result: {result}");
-        twoChoices.SaveOperation(file, result);
+        dataAccess.SaveOperation(file, result);
     }
-}
-public interface IOperation
-{ 
-    public double Calculate(double[] numbers); 
-}
-public interface ITwoChoices
-{
-    public void SaveOperation(string operation, double result);
 }

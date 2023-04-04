@@ -3,9 +3,9 @@
 internal class Operator
 {
     public char Symbol {get;}
-    internal IOperation Operation {get;}
+    internal Operation Operation {get;}
 
-    public Operator(char symbol, IOperation operation)
+    public Operator(char symbol, Operation operation)
     {
         Symbol = symbol;
         Operation = operation;

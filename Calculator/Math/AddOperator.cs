@@ -1,8 +1,8 @@
 ﻿namespace Calculator.Math;
 
-internal class AddOperation : IOperation
+internal class AddOperation : Operation
 {
-    public double Calculate(double[] numbers)
+    public override double Calculate(double[] numbers)
     {
         return numbers.Sum();
     }
