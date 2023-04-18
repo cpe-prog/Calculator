@@ -1,6 +1,6 @@
-﻿namespace Calculator.DataAccessFunctions;
+﻿namespace Calculators.DataAccessFunctions;
 
-internal class TextFileDataAccess : DataAccess
+public class TextFileDataAccess : DataAccess
 {
     private readonly string _filePath = Environment.ExpandEnvironmentVariables("%USERPROFILE%\\Desktop\\History.txt");
     public override void SaveOperation(string operation, double result)

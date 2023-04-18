@@ -1,7 +1,7 @@
 ﻿using MongoDB.Bson;
 using MongoDB.Driver;
 
-namespace Calculator.MongoDb;
+namespace Calculators.MongoDb;
 
 internal abstract class MongoDbHistory
 {

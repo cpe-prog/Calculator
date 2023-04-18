@@ -1,7 +1,7 @@
 ﻿using MongoDB.Bson;
 using MongoDB.Driver;
 
-namespace Calculator.DataAccessFunctions;
+namespace Calculators.DataAccessFunctions; 
 
 internal class MongoDbDataAccess : DataAccess
 {

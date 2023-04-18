@@ -1,9 +1,9 @@
-﻿using Calculator.DataAccessFunctions;
-using Calculator.Math;
-using Calculator.MongoDb;
-using Calculator.TextFile;
+﻿using Calculators.DataAccessFunctions;
+using Calculators.Math;
+using Calculators.MongoDb;
+using Calculators.TextFile;
 
-namespace Calculator;
+namespace Calculators;
 public static class Program
 {
     private static readonly Dictionary<string, Operator> Operators = new()
@@ -13,13 +13,14 @@ public static class Program
         { "multiply", new Operator('×', new MultiplyOperation())},
         { "divide", new Operator('÷', new DivideOperation())}
     };
-    private static void Main(string[] args)
+
+    public static void Main(string[] args)
     {
         var cmd = args[0];
         var db = Environment.ExpandEnvironmentVariables("%USERPROFILE%\\Desktop\\History.txt");
         switch (cmd)
         {
-            case "showDB.data":
+            case "showDB.data": 
                 MongoDbHistory.ShowDataBase();
                 return;
             case "removeDB.data":
@@ -47,7 +48,7 @@ public static class Program
                 dataAccess = new TextFileDataAccess();
                 break;
             default:
-                Console.WriteLine("Invalid choices");
+                Console.WriteLine("Invalid");
                 return;
         }
         
