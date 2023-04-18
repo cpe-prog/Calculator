@@ -8,138 +8,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bd3b3b91-a5fa-4e37-b1a0-cf6ce4b5e6dc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Calculators.Tests/Calculators.Tests.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Calculators.Tests/bin/Debug/net7.0/CoverletSourceRootsMapping" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Calculators.Tests/obj/Debug/net7.0/.NETCoreApp,Version=v7.0.AssemblyAttributes.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Calculators.Tests/obj/project.assets.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Calculators.Tests/obj/project.nuget.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Calculators.Tests/obj/project.packagespec.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Calculators.Tests/obj/rider.project.restore.info" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Calculators/Calculators.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Calculators/DataAccess.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Calculators/Operation.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Calculators/bin/Debug/net7.0/Calculator.deps.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Calculators/bin/Debug/net7.0/Calculator.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Calculators/bin/Debug/net7.0/Calculators.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Calculators/bin/Debug/net7.0/Calculators.pdb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Calculators/bin/Debug/net7.0/MongoDB.Bson.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Calculators/bin/Debug/net7.0/MongoDB.Driver.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Calculators/bin/Debug/net7.0/xunit.abstractions.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Calculators/bin/Debug/net7.0/xunit.assert.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Calculators/bin/Debug/net7.0/xunit.core.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Calculators/bin/Debug/net7.0/xunit.execution.dotnet.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Calculators/bin/Debug/net7.0/xunit.runner.reporters.netcoreapp10.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Calculators/bin/Debug/net7.0/xunit.runner.utility.netcoreapp10.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Calculators/bin/Debug/net7.0/xunit.runner.visualstudio.dotnetcore.testadapter.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Calculators/obj/Calculator.csproj.nuget.g.targets" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Calculators/obj/Debug/net6.0/Calculator.GlobalUsings.g.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Calculators/obj/Debug/net7.0/.NETCoreApp,Version=v7.0.AssemblyAttributes.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Calculators/obj/Debug/net7.0/Calculator.GlobalUsings.g.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Calculators/obj/Debug/net7.0/Calculator.assets.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Calculators/obj/Debug/net7.0/Calculator.csproj.AssemblyReference.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Calculators/obj/Debug/net7.0/Calculator.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Calculators/obj/Debug/net7.0/Calculator.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Calculators/obj/Debug/net7.0/Calculator.genruntimeconfig.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Calculators/obj/Debug/net7.0/Calculator.pdb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Calculators/obj/Debug/net7.0/apphost.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Calculators/obj/Debug/net7.0/ref/Calculator.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Calculators/obj/Debug/net7.0/refint/Calculator.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Calculators/obj/project.assets.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Calculators/obj/project.nuget.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Calculators/obj/project.packagespec.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Calculators/obj/rider.project.restore.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Calculator/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Calculator/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Calculator/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Calculator/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calculator.sln" beforeDir="false" afterPath="$PROJECT_DIR$/Calculator.sln" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calculator/Calculator.csproj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calculator/DataAccessFunctions/MongoDbDataAccess.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Calculators/DataAccessFunctions/MongoDbDataAccess.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calculator/DataAccessFunctions/TextFileDataAccess.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Calculators/DataAccessFunctions/TextFileDataAccess.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calculator/Math/AddOperator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Calculators/Math/AddOperator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calculator/Math/DivideOperator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Calculators/Math/DivideOperator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calculator/Math/MultiplyOperator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Calculators/Math/MultiplyOperator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calculator/Math/SubtractOperator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Calculators/Math/SubtractOperator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calculator/MongoDb/MongoDbHistory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Calculators/MongoDb/MongoDbHistory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calculator/Operation.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calculator/Operator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Calculators/Operator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calculator/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Calculators/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calculator/TextFile/TextFileHistory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Calculators/TextFile/TextFileHistory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calculator/bin/Debug/net6.0/AWSSDK.Core.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calculator/bin/Debug/net6.0/AWSSDK.SecurityToken.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calculator/bin/Debug/net6.0/Calculator.deps.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calculator/bin/Debug/net6.0/Calculator.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Calculators/obj/Debug/net6.0/Calculator.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calculator/bin/Debug/net6.0/Calculator.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calculator/bin/Debug/net6.0/Calculator.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Calculators/obj/Debug/net6.0/Calculator.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calculator/bin/Debug/net6.0/Calculator.runtimeconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/Calculators/bin/Debug/net7.0/Calculator.runtimeconfig.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calculator/bin/Debug/net6.0/DnsClient.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calculator/bin/Debug/net6.0/Microsoft.Extensions.Logging.Abstractions.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calculator/bin/Debug/net6.0/MongoDB.Bson.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calculator/bin/Debug/net6.0/MongoDB.Driver.Core.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calculator/bin/Debug/net6.0/MongoDB.Libmongocrypt.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calculator/bin/Debug/net6.0/SharpCompress.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calculator/bin/Debug/net6.0/Snappier.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calculator/bin/Debug/net6.0/ZstdSharp.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calculator/bin/Debug/net6.0/runtimes/linux/native/libmongocrypt.so" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calculator/bin/Debug/net6.0/runtimes/osx/native/libmongocrypt.dylib" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calculator/bin/Debug/net6.0/runtimes/win/native/mongocrypt.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calculator/bin/Debug/net7.0/AWSSDK.Core.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Calculators/bin/Debug/net7.0/AWSSDK.Core.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calculator/bin/Debug/net7.0/AWSSDK.SecurityToken.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Calculators/bin/Debug/net7.0/AWSSDK.SecurityToken.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calculator/bin/Debug/net7.0/Calculator.deps.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calculator/bin/Debug/net7.0/Calculator.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calculator/bin/Debug/net7.0/Calculator.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calculator/bin/Debug/net7.0/Calculator.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calculator/bin/Debug/net7.0/Calculator.runtimeconfig.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calculator/bin/Debug/net7.0/DnsClient.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Calculators/bin/Debug/net7.0/DnsClient.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calculator/bin/Debug/net7.0/Microsoft.Extensions.Logging.Abstractions.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Calculators/bin/Debug/net7.0/Microsoft.Extensions.Logging.Abstractions.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calculator/bin/Debug/net7.0/MongoDB.Bson.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calculator/bin/Debug/net7.0/MongoDB.Driver.Core.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Calculators/bin/Debug/net7.0/MongoDB.Driver.Core.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calculator/bin/Debug/net7.0/MongoDB.Driver.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calculator/bin/Debug/net7.0/MongoDB.Libmongocrypt.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Calculators/bin/Debug/net7.0/MongoDB.Libmongocrypt.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calculator/bin/Debug/net7.0/SharpCompress.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Calculators/bin/Debug/net7.0/SharpCompress.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calculator/bin/Debug/net7.0/Snappier.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Calculators/bin/Debug/net7.0/Snappier.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calculator/bin/Debug/net7.0/ZstdSharp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Calculators/bin/Debug/net7.0/ZstdSharp.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calculator/bin/Debug/net7.0/runtimes/linux/native/libmongocrypt.so" beforeDir="false" afterPath="$PROJECT_DIR$/Calculators/bin/Debug/net7.0/runtimes/linux/native/libmongocrypt.so" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calculator/bin/Debug/net7.0/runtimes/osx/native/libmongocrypt.dylib" beforeDir="false" afterPath="$PROJECT_DIR$/Calculators/bin/Debug/net7.0/runtimes/osx/native/libmongocrypt.dylib" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calculator/bin/Debug/net7.0/runtimes/win/native/mongocrypt.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Calculators/bin/Debug/net7.0/runtimes/win/native/mongocrypt.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calculator/obj/Calculator.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Calculators/obj/Calculator.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calculator/obj/Calculator.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/Calculators/obj/Calculator.csproj.nuget.g.props" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calculator/obj/Calculator.csproj.nuget.g.targets" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calculator/obj/Debug/net6.0/.NETCoreApp,Version=v6.0.AssemblyAttributes.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Calculators/obj/Debug/net6.0/.NETCoreApp,Version=v6.0.AssemblyAttributes.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calculator/obj/Debug/net6.0/Calculator.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Calculators/obj/Debug/net6.0/Calculator.AssemblyInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calculator/obj/Debug/net6.0/Calculator.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Calculators/obj/Debug/net6.0/Calculator.AssemblyInfoInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calculator/obj/Debug/net6.0/Calculator.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/Calculators/obj/Debug/net6.0/Calculator.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calculator/obj/Debug/net6.0/Calculator.GlobalUsings.g.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calculator/obj/Debug/net6.0/Calculator.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Calculators/obj/Debug/net6.0/Calculator.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calculator/obj/Debug/net6.0/Calculator.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Calculators/obj/Debug/net6.0/Calculator.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calculator/obj/Debug/net6.0/Calculator.csproj.CopyComplete" beforeDir="false" afterPath="$PROJECT_DIR$/Calculators/obj/Debug/net6.0/Calculator.csproj.CopyComplete" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calculator/obj/Debug/net6.0/Calculator.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Calculators/obj/Debug/net6.0/Calculator.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calculator/obj/Debug/net6.0/Calculator.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Calculators/obj/Debug/net6.0/Calculator.csproj.FileListAbsolute.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calculator/obj/Debug/net6.0/Calculator.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calculator/obj/Debug/net6.0/Calculator.genruntimeconfig.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Calculators/obj/Debug/net6.0/Calculator.genruntimeconfig.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calculator/obj/Debug/net6.0/Calculator.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calculator/obj/Debug/net6.0/apphost.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Calculators/obj/Debug/net6.0/apphost.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calculator/obj/Debug/net6.0/ref/Calculator.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Calculators/obj/Debug/net6.0/ref/Calculator.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calculator/obj/Debug/net6.0/refint/Calculator.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Calculators/obj/Debug/net6.0/refint/Calculator.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calculator/obj/Debug/net7.0/.NETCoreApp,Version=v7.0.AssemblyAttributes.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calculator/obj/Debug/net7.0/Calculator.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Calculators/obj/Debug/net7.0/Calculator.AssemblyInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calculator/obj/Debug/net7.0/Calculator.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Calculators/obj/Debug/net7.0/Calculator.AssemblyInfoInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calculator/obj/Debug/net7.0/Calculator.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/Calculators/obj/Debug/net7.0/Calculator.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calculator/obj/Debug/net7.0/Calculator.GlobalUsings.g.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calculator/obj/Debug/net7.0/Calculator.assets.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calculator/obj/Debug/net7.0/Calculator.csproj.AssemblyReference.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calculator/obj/Debug/net7.0/Calculator.csproj.CopyComplete" beforeDir="false" afterPath="$PROJECT_DIR$/Calculators/obj/Debug/net7.0/Calculator.csproj.CopyComplete" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calculator/obj/Debug/net7.0/Calculator.csproj.CoreCompileInputs.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calculator/obj/Debug/net7.0/Calculator.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Calculators/obj/Debug/net7.0/Calculator.csproj.FileListAbsolute.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calculator/obj/Debug/net7.0/Calculator.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calculator/obj/Debug/net7.0/Calculator.genruntimeconfig.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calculator/obj/Debug/net7.0/Calculator.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calculator/obj/Debug/net7.0/apphost.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calculator/obj/Debug/net7.0/ref/Calculator.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calculator/obj/Debug/net7.0/refint/Calculator.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calculator/obj/project.assets.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calculator/obj/project.nuget.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calculator/obj/project.packagespec.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calculator/obj/rider.project.restore.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Calculators.Tests/UnitTest1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Calculators.Tests/UnitTest1.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Calculators.Tests/bin/Debug/net7.0/Calculators.Tests.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Calculators.Tests/bin/Debug/net7.0/Calculators.Tests.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Calculators.Tests/bin/Debug/net7.0/Calculators.Tests.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Calculators.Tests/bin/Debug/net7.0/Calculators.Tests.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Calculators.Tests/obj/Debug/net7.0/Calculators.Tests.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Calculators.Tests/obj/Debug/net7.0/Calculators.Tests.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Calculators.Tests/obj/Debug/net7.0/Calculators.Tests.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Calculators.Tests/obj/Debug/net7.0/Calculators.Tests.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Calculators.Tests/obj/Debug/net7.0/ref/Calculators.Tests.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Calculators.Tests/obj/Debug/net7.0/ref/Calculators.Tests.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Calculators.Tests/obj/Debug/net7.0/refint/Calculators.Tests.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Calculators.Tests/obj/Debug/net7.0/refint/Calculators.Tests.dll" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -185,30 +60,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.environmentSetup",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;rider.external.source.directories&quot;: [
-      &quot;C:\\Users\\grian\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\DecompilerCache&quot;,
-      &quot;C:\\Users\\grian\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\SourcesCache&quot;,
-      &quot;C:\\Users\\grian\\AppData\\Local\\Symbols\\src&quot;
+  "keyToStringList": {
+    "rider.external.source.directories": [
+      "C:\\Users\\grian\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\DecompilerCache",
+      "C:\\Users\\grian\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\SourcesCache",
+      "C:\\Users\\grian\\AppData\\Local\\Symbols\\src"
     ]
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected=".NET Project.Calculator">
     <configuration name="Calculator" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="$PROJECT_DIR$/Calculator/bin/Debug/net7.0/Calculator.exe" />
@@ -303,6 +178,7 @@
       <workItem from="1681361243086" duration="5467000" />
       <workItem from="1681714181215" duration="1370000" />
       <workItem from="1681783563400" duration="736000" />
+      <workItem from="1681784617552" duration="7628000" />
     </task>
     <task id="LOCAL-00001" summary="feat: separate to classes">
       <created>1680250130310</created>
@@ -339,7 +215,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680593035202</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Edit for Test">
+      <created>1681784894256</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1681784894256</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -348,6 +231,26 @@
   <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
   <component name="Vcs.Log.Tabs.Properties">
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="origin/main" />
+                </option>
+              </RecentGroup>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="HEAD" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
@@ -369,26 +272,6 @@
         </entry>
       </map>
     </option>
-    <option name="RECENT_FILTERS">
-      <map>
-        <entry key="Branch">
-          <value>
-            <list>
-              <RecentGroup>
-                <option name="FILTER_VALUES">
-                  <option value="origin/main" />
-                </option>
-              </RecentGroup>
-              <RecentGroup>
-                <option name="FILTER_VALUES">
-                  <option value="HEAD" />
-                </option>
-              </RecentGroup>
-            </list>
-          </value>
-        </entry>
-      </map>
-    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
@@ -398,7 +281,8 @@
     <MESSAGE value="done: two saving choices" />
     <MESSAGE value="refactoring dataAccess" />
     <MESSAGE value="done" />
-    <option name="LAST_COMMIT_MESSAGE" value="done" />
+    <MESSAGE value="Edit for Test" />
+    <option name="LAST_COMMIT_MESSAGE" value="Edit for Test" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
