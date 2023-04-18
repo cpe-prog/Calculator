@@ -15,4 +15,6 @@ public class DivideOperation : Operation
         }
         return result;
     }
+    
+    public object Symbol { get;}
 }

@@ -2,7 +2,7 @@
 
 public class Operator
 {
-    public char Symbol {get;} 
+    public char Symbol { get;}
     internal Operation Operation {get;}
     public Operator(char symbol, Operation operation)
     {

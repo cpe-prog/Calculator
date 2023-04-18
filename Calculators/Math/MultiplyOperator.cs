@@ -13,4 +13,6 @@ public class MultiplyOperation : Operation
         }
         return result;
     }
+
+    public object Symbol { get;}
 }  

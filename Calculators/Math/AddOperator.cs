@@ -7,5 +7,5 @@ public class AddOperation : Operation
         return numbers.Sum();
     }
 
-    public object Symbol { get; set; }
+    public object Symbol { get;}
 }

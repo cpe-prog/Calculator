@@ -2,6 +2,7 @@
 
 public class SubtractOperation : Operation
 {
+
     public override double Calculate(double[] numbers)
     {
         var result = numbers[0];
@@ -11,4 +12,6 @@ public class SubtractOperation : Operation
         }
         return result;
     }
+
+    public object Symbol { get; }
 }
